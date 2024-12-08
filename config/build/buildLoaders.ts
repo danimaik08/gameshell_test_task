@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import ReactRefreshTypeScript from 'react-refresh-typescript';
 import PostcssCustomProperties from 'postcss-custom-properties';
+import tailwindCSS from 'tailwindcss';
 
 type Options = {
   mode: 'development' | 'production';
@@ -32,7 +33,7 @@ export default function buildLoaders(
         loader: 'postcss-loader',
         options: {
           postcssOptions: {
-            plugins: [PostcssCustomProperties()],
+            plugins: [PostcssCustomProperties(), tailwindCSS()],
           },
         },
       },
