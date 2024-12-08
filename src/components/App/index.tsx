@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Link, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Header = styled.h1`
@@ -11,14 +10,6 @@ export default function App() {
 
   return (
     <div data-testid="App">
-      <div>
-        <div>
-          <Link to="/about">about</Link>
-        </div>
-        <div>
-          <Link to="/shop">shop</Link>
-        </div>
-      </div>
       <Header>React</Header>
       <div style={{ display: 'flex', gap: 8 }}>
         <div>Counter: {count}</div>
@@ -37,7 +28,6 @@ export default function App() {
           -
         </button>
       </div>
-      <Outlet />
     </div>
   );
 }

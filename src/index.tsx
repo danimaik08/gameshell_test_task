@@ -1,7 +1,7 @@
 import './index.css';
 import { createRoot } from 'react-dom/client';
 
-import RootComponent from './RootComponent';
+import App from './components/App';
 
 const root = document.getElementById('root');
 
@@ -11,4 +11,4 @@ if (!root) {
 
 const container = createRoot(root);
 
-container.render(<RootComponent />);
+container.render(<App />);
